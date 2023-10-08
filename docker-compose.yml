@@ -1,0 +1,8 @@
+version: '3'
+services:
+  siprem-colors: # API de Alumbrado Publico y Barrido
+    build: .
+    ports:
+      - "8095:80"
+    volumes:
+      - .:/code

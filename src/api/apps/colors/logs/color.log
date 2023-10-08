@@ -1,0 +1,11 @@
+2023-10-08 16:37:10,515 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 
+2023-10-08 16:49:15,499 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 
+2023-10-08 16:50:26,238 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 
+2023-10-08 16:50:57,250 [INFO] - Se hizo una solicitud a la ruta /<function APIRouter.api_route.<locals>.decorator at 0xffff9e139b80>. Data enviada: 
+2023-10-08 16:51:36,316 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: <starlette.requests.Request object at 0xffffa02bc9d0>
+2023-10-08 16:51:46,314 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: <starlette.requests.Request object at 0xffffba6fc9d0>
+2023-10-08 17:30:58,770 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 
+2023-10-08 17:38:12,859 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 
+2023-10-08 17:41:49,364 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 
+2023-10-08 17:47:22,727 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 1
+2023-10-08 17:47:30,584 [INFO] - Se hizo una solicitud a la ruta /color. Data enviada: 1
