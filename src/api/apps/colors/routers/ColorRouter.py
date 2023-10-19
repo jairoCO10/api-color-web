@@ -41,3 +41,11 @@ async def get_color_all( db:Session=Depends(Connection.get_db)):
     return response
 
 
+@ColorRouter.get("proyecto")
+async def get_proyecto(id_proyecto:int, db:Session=Depends(Connection.get_db)):
+    data_color= Color()
+
+    response = data_color.get_proyecto(id_proyecto, db)
+
+    return response
+

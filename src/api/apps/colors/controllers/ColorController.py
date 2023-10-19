@@ -3,8 +3,10 @@ from ....database.connection.connection import Connection
 from sqlalchemy.orm import Session
 from fastapi import Depends
 from ..services.DataColorService import DataColorService
+from ..services.ProyectosService import ProyectoService
 colores_service = ColorService()
 data_color = DataColorService()
+data_proyecto = ProyectoService()
 
 class Color:
     def get_colors(self, db):
@@ -51,6 +53,25 @@ class Color:
                     data[f"{response.title}"] = procesar_data_color(color)
                        
         return data
+    
+
+    def get_proyecto(self, id_proyecto:int, db:Session):
+
+        data = {}
+        response = data_proyecto.get_proyectos_by_id(id_proyecto, db)
+        if not response:
+            return None
+
+        dat_proyecto = procesar_proyecto(response)
+        data_colores = self.data_resource(db)  # Obtiene los datos de los colores usando data_resource
+        dat_proyecto['colores'] = data_colores  # Asigna los datos de colores al diccionario del proyecto
+
+        # Crea un diccionario para almacenar el resultado final
+        result = {
+            'proyecto': dat_proyecto,  # Puedes cambiar 'proyecto' por la clave que desees para el proyecto
+        }
+        return result
+
 
 def data_procesada(campos, color):
     dataprocesada = {}
@@ -59,6 +80,14 @@ def data_procesada(campos, color):
         if value is not None:
             dataprocesada[campo] = value
     return dataprocesada
+
+
+def procesar_proyecto(proyecto):
+    campos= ['id',"version",
+                "nombre_proyecto","descripcion_proyecto", "estado",
+            ]
+    
+    return data_procesada(campos, proyecto)
 
 
 

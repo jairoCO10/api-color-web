@@ -14,6 +14,7 @@ from src.api.database.database import Database
 from src.api.database.models.UsersModel import Base
 from src.api.database.models.ColorModels import Base
 from src.api.database.models.dateColorsModel import Base
+from src.api.database.models.ProyectosModel import Base
 
 
 # this is the Alembic Config object, which provides
